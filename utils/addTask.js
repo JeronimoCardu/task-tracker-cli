@@ -2,12 +2,11 @@ const fs = require('node:fs/promises')
 const { getDate } = require('./getDate.js')
 const { getNextID } = require('./getNextID.js')
 
-async function addTask (value = '') {
+async function addTask (value = '', jsonFile) {
   if (value === '') {
     console.log('Add the task that you want')
     process.exit(0)
   }
-  const jsonFile = './tasks.json'
   let tasks = []
   try {
     const data = await fs.readFile(jsonFile, 'utf-8')

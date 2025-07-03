@@ -6,6 +6,7 @@ const { updateTask } = require('./utils/updateTask')
 const { filterTasks } = require('./utils/filterTasks')
 
 async function menu () {
+  const jsonFile = './tasks.json'
   const action = process.argv[2]
   if (action === '7') process.exit(0)
   const value = process.argv[3]
@@ -14,34 +15,34 @@ async function menu () {
     console.log(`
       ------ menu ------
       What do you to do?
-      1. Add task "task"
-      2. Update task ID
-      3. Delete task ID
-      4. Mark task in progress ID
-      5. Mark task is done ID
-      6. Filter "state"
+      1. Add task -> "task"
+      2. Update task -> ID "task"
+      3. Delete task -> ID
+      4. Mark task in progress -> ID
+      5. Mark task is done -> ID
+      6. Filter -> "state"
       7. EXIT
-      write 'node task-tracker [option] [value] [optional newValue]'`)
+      write 'node task-tracker [option] [ID] [optional newValue]'`)
   }
 
   switch (action) {
     case '1':
-      addTask(value)
+      addTask(value, jsonFile)
       break
     case '2':
-      updateTask(value, newValue)
+      updateTask(value, jsonFile, newValue)
       break
     case '3':
-      deleteTask(value)
+      deleteTask(value, jsonFile)
       break
     case '4':
-      toProgress(value)
+      toProgress(value, jsonFile)
       break
     case '5':
-      toDone(value)
+      toDone(value, jsonFile)
       break
     case '6':
-      filterTasks(value)
+      filterTasks(value, jsonFile)
       break
     default:
       process.exit(0)
