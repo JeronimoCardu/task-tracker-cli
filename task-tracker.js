@@ -1,9 +1,9 @@
-const { addTask } = require('./addTask')
-const { deleteTask } = require('./deleteTask')
-const { toDone } = require('./toDone')
-const { toProgress } = require('./toProgress')
-const { updateTask } = require('./updateTask')
-const { filterTasks } = require('./filterTasks')
+const { addTask } = require('./utils/addTask')
+const { deleteTask } = require('./utils/deleteTask')
+const { toDone } = require('./utils/toDone')
+const { toProgress } = require('./utils/toProgress')
+const { updateTask } = require('./utils/updateTask')
+const { filterTasks } = require('./utils/filterTasks')
 
 async function menu () {
   const action = process.argv[2]

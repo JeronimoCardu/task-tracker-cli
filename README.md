@@ -33,6 +33,14 @@ Este proyecto te ayudará a practicar tus habilidades de programación, incluyen
 
 ---
 
+## Propiedades
+
+id: Identificador unico para la tarea
+description: corta descripcion para la tarea
+status: Estado de la tarea (por hacer, en progreso, completada)
+createdAt: Fecha y hora de cuando fue creada la tarea
+updatedAt: Fecha y hora de cuando fue actualizada la tarea
+
 ## 💻 Comandos de Ejemplo
 
 ```bash
