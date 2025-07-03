@@ -20,7 +20,7 @@ async function menu () {
       3. Delete task -> ID
       4. Mark task in progress -> ID
       5. Mark task is done -> ID
-      6. Filter -> "state"
+      6. Filter -> "all | todo | progress | done"
       7. EXIT
       write 'node task-tracker [option] [ID] [optional newValue]'`)
   }
@@ -45,6 +45,7 @@ async function menu () {
       filterTasks(value, jsonFile)
       break
     default:
+      console.log('Opcion invalida, saliendo...')
       process.exit(0)
   }
 }

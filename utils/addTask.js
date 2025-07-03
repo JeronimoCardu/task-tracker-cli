@@ -17,7 +17,7 @@ async function addTask (value = '', jsonFile) {
   const newTask = [...tasks, {
     id: getNextID(tasks),
     description: value,
-    status: 'todo',
+    status: 'to do',
     createdAt: getDate(),
     updatedAt: getDate()
   }]
